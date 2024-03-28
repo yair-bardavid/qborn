@@ -110,13 +110,13 @@ class CusImg(object):
     img_for_draw = Image.new('RGBA', (w, h), (255, 255, 255, 0))
     imgDraw = ImageDraw.Draw(img_for_draw)
 
-    font = ImageFont.truetype(font_name, size=font_size)
+    font = ImageFont.truetype(font_name, size=font_size, encoding="unic")
     x1, y1, x2, y2 = imgDraw.textbbox((0,0), message, font=font)
     w_t = x2 - x1 + (len_message_ignore_nikud-1)*kerning
 
     while w_t >= w * reduce_size_factor:
       font_size *= reduce_size_factor
-      font = ImageFont.truetype(font_name, size=int(font_size))
+      font = ImageFont.truetype(font_name, size=int(font_size), encoding="unic")
       x1, y1, x2, y2 = imgDraw.textbbox((0,0), message, font=font)
       w_t = x2 - x1 + (len_message_ignore_nikud-1)*kerning
 
