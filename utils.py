@@ -10,17 +10,31 @@ from PIL import Image, ImageDraw, ImageFont, ImageOps, ImageFilter
 import matplotlib.pyplot as plt
 
 
-FONTS_DICT = dict(aram='ARAM.TTF',
-                  alef='Alef-Regular.ttf',
-                  cafe='CAFERG_.TTF',
-                  californian='CALIFB.TTF',
-                  dana='DanaYadAlefAlefAlef-Normal.otf',
-                  firamono='FiraMono-Regular.ttf',
-                  freeserif='FreeSerif.ttf',
-                  gill='GIL_____.TTF',
-                  keren='Guttman_Keren-Normal.ttf',
-                  tzvi='TZVIM.TTF',
+# FONTS_DICT = dict(aram='ARAM.TTF',
+#                   alef='Alef-Regular.ttf',
+#                   cafe='CAFERG_.TTF',
+#                   californian='CALIFB.TTF',
+#                   dana='DanaYadAlefAlefAlef-Normal.otf',
+#                   firamono='FiraMono-Regular.ttf',
+#                   freeserif='FreeSerif.ttf',
+#                   gill='GIL_____.TTF',
+#                   keren='Guttman_Keren-Normal.ttf',
+#                   tzvi='TZVIM.TTF',
+#                   )
+
+
+FONTS_DICT = dict(aram='fonts/ARAM.TTF',
+                  alef='fonts/Alef-Regular.ttf',
+                  cafe='fonts/CAFERG_.TTF',
+                  californian='fonts/CALIFB.TTF',
+                  dana='fonts/DanaYadAlefAlefAlef-Normal.otf',
+                  firamono='fonts/FiraMono-Regular.ttf',
+                  freeserif='fonts/FreeSerif.ttf',
+                  gill='fonts/GIL_____.TTF',
+                  keren='fonts/Guttman_Keren-Normal.ttf',
+                  tzvi='fonts/TZVIM.TTF',
                   )
+
 
 def mm2pix(mm, PPI=300):
   return round(mm / ( 25.4 / PPI ))
